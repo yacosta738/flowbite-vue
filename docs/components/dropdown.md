@@ -46,25 +46,25 @@ import { FwbDropdown } from 'flowbite-vue'
 ```vue
 <template>
   <fwb-dropdown text="Menu">
-    <list-group>
-      <list-group-item>
+    <fwb-list-group>
+      <fwb-list-group-item>
         Profile
-      </list-group-item>
-      <list-group-item>
+      </fwb-list-group-item>
+      <fwb-list-group-item>
         Settings
-      </list-group-item>
-      <list-group-item>
+      </fwb-list-group-item>
+      <fwb-list-group-item>
         Messages
-      </list-group-item>
-      <list-group-item>
+      </fwb-list-group-item>
+      <fwb-list-group-item>
         Download
-      </list-group-item>
-    </list-group>
+      </fwb-list-group-item>
+    </fwb-list-group>
   </fwb-dropdown>
 </template>
 
 <script setup>
-import { FwbDropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
+import { FwbDropdown, FwbListGroup, FwbListGroupItem } from 'flowbite-vue'
 </script>
 ```
 
@@ -73,10 +73,38 @@ import { FwbDropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
 <fwb-dropdown-example-trigger />
 ```vue
 <template>
-  <fwb-dropdown text="Bottom">
+  <fwb-dropdown>
     <template #trigger>
       <span>Custom Trigger Element</span>
     </template>
+    <fwb-list-group>
+      <fwb-list-group-item>
+        Profile
+      </fwb-list-group-item>
+      <fwb-list-group-item>
+        Settings
+      </fwb-list-group-item>
+      <fwb-list-group-item>
+        Messages
+      </fwb-list-group-item>
+      <fwb-list-group-item>
+        Download
+      </fwb-list-group-item>
+    </fwb-list-group>
+  </fwb-dropdown>
+</template>
+
+<script setup>
+import { FwbDropdown, FwbListGroup, FwbListGroupItem } from 'flowbite-vue'
+</script>
+```
+
+## Dropdown - close inside
+
+<fwb-dropdown-example-trigger />
+```vue
+<template>
+  <fwb-dropdown text="Bottom" close-inside>
     <list-group>
       <list-group-item>
         Profile
